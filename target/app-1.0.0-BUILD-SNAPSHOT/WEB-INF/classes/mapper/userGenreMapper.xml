@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.movielike.app.dao.userGenreMapper">
+<!--    <select id="selectUserGenre" parameterType="int" resultType="userGenreDto">-->
+<!--        select * from usergenre where ugId = #{ugId}-->
+<!--    </select>-->
+    <insert id="insertUserGenre" parameterType="java.util.List">
+        insert into usergenre(genrId, userId)
+        values
+        <foreach collection="list" item="item" separator=",">
+            (
+                #{item.genrId},
+                #{item.userId}
+            )
+        </foreach>
+    </insert>
+</mapper>
