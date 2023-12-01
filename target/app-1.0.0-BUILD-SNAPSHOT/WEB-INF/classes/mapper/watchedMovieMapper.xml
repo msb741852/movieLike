@@ -15,4 +15,13 @@
     <delete id="deleteWatchedMovie" parameterType="watchedMovieDto">
         delete from watchedmovie where movId = #{movId} and userId = #{userId}
     </delete>
+
+    <!-- 키워드 찾기 무비 리스트 출력 -->
+    <select id="selectWatchedMovie" resultType="watchedMovieDto" parameterType="watchedMovieDto">
+        select * from watchedmovie WHERE userId = #{userId}
+    </select>
+
+    <delete id="deleteAllWatchedMovie" parameterType="int">
+        delete from watchedmovie where userId = #{userId}
+    </delete>
 </mapper>

@@ -18,16 +18,8 @@
     float: left;
     font-weight: 900;
 }
-.select_r {
-    float: right;
-    outline: none;
-    margin-top: 15px;
-    font-size: 16px;
-    padding: 3px 5px;
-}
-
 .search_bar {
-    width: 600px;
+    width: 950px;
     height: 50px;
     margin: 100px auto;
     position: relative;
@@ -58,7 +50,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
+.select_r {
+    float: right;
+    outline: none;
+    margin-top: 15px;
+    font-size: 16px;
+    padding: 3px 5px;
+}
 .content_box {
     display: flex;
     gap: 30px;
@@ -67,7 +65,16 @@
 }
 .content {
     width: calc((100% - 30px * 4) / 5);
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    transition: all 0.3s;
     cursor: pointer;
+}
+.content:hover {
+    box-shadow: 2px 2px 5px 5px #3b3b3b;
+    transition: all 0.3s;
+    transform: scale(1.1);
 }
 .poster {
     width: 100%;
@@ -76,6 +83,9 @@
 .movie_name {
     font-size: 1.5em;
     margin-top: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 .movie_year {
     float: left;
@@ -100,6 +110,41 @@
     font-size: 1em;
 }
 
+@media screen and (max-width: 1200px) {
+    .content {
+        width: calc((100% - 30px * 3) / 4);
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .movie_name {
+        font-size: 1.3em;
+    }
+    .movie_year {
+        font-size: 0.8em;
+    }
+    .star_icon {
+        width: 18px;
+        height: 18px;
+    }
+    .movie_avg {
+        font-size: 1em;
+    }
+    .movie_avg_cnt {
+        font-size: 0.8em;
+    }
+}
+@media screen and (max-width: 850px) {
+    .content {
+        width: calc((100% - 30px * 2) / 3);
+    }
+}
+@media screen and (max-width: 650px) {
+    .avg_box {
+        float: left;
+    }
+}
+
 @media screen and (min-width: 280px) and (max-width: 480px) {
     .title_box {
         padding: 15px;
@@ -113,7 +158,7 @@
     }
     .content_box {
         gap: 20px;
-        padding: 20px 30px;
+        padding: 20px;
     }
     .content {
         width: calc((100% - 20px * 1) / 2);
@@ -138,5 +183,10 @@
     }
     .avg_box {
         margin-top: 5px;
+    }
+    .search_bar {
+        margin: 30px auto;
+        width: 300px;
+        height: 40px;
     }
 }

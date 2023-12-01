@@ -13,4 +13,91 @@
     <update id="updatePassword" parameterType="userDto">
         update user set userPw = #{userPw} where userEmail = #{userEmail}
     </update>
+    <select id="selectPassword" parameterType="int" resultType="String">
+        select userPw from user where userId = #{userId}
+    </select>
+    <delete id="deleteUser" parameterType="int">
+        delete from user where userId = #{userId}
+    </delete>
+
+    <select id="selectUserId" parameterType="String" resultType="int">
+        select userId from user where userEmail = #{userEmail}
+    </select>
+    <!-- 아이디 중복 체크1 -->
+    <select id="checkId" parameterType="String" resultType="int">
+        select count(*) from user where userEmail = #{userEmail}
+    </select>
+    <!-- 닉네임 중복체크 -->
+    <select id="checkNick" resultType="int" parameterType="String">
+        select count(*)
+        from
+        user
+        where
+        userNickname = #{userNickname}
+    </select>
+    <!-- 닉네임 중복체크 -->
+    <select id="checkPhone" resultType="int" parameterType = "String">
+        select count(*)
+        from
+        user
+        where
+        userPhone = #{userPhone}
+    </select>
+    <insert id="insertUser" parameterType="userDto">
+        insert into user(userEmail, userPw, userName, userBirth, userNickname, userPhone ) values (#{userEmail},#{userPw},#{userName},#{userBirth},#{userNickname},#{userPhone})
+    </insert>
+    <select id="chkUserInfo" parameterType="map" resultType="userDto">
+        SELECT * FROM user WHERE userEmail = #{userEmail} AND userPw = #{userPw}
+    </select>
+
+    <!-- ....................................... -->
+    <!-- ..............회원 정보 수정............. -->
+    <!-- ....................................... -->
+    <!--    회원 정보 불러오기. 장르는 movieMapper에 있음-->
+    <select id="selectUser" parameterType="int" resultType="userDto">
+        select userId, userEmail, userPw, userName, userBirth, userNickName, userPhone, userRegDate
+        from user
+        where userId = #{userId}
+    </select>
+
+    <!--    회원 중복 체크-->
+    <!-- 아이디 중복 체크 -->
+    <select id="checkIdModify" parameterType="userDto" resultType="int">
+        select count(userId) from user
+        where userEmail = #{userEmail}
+        and NOT userId = #{userId}
+    </select>
+    <!-- 닉네임 중복체크 -->
+    <select id="checkNickModify" parameterType="userDto" resultType="int">
+        select count(userId) from user
+        where userNickName = #{userNickname}
+        and NOT userId = #{userId}
+
+    </select>
+    <!-- 핸드폰번호 중복체크 -->
+    <select id="checkPhoneModify" parameterType="userDto" resultType="int">
+        select count(userId) from user
+        where userPhone = #{userPhone}
+        and NOT userId = #{userId}
+    </select>
+    <!--    회원 정보 수정-->
+    <update id="updateUser" parameterType="userDto">
+        update user
+        set userEmail = #{userEmail}
+        , userPw = #{userPw}
+        , userName = #{userName}
+        , userNickName = #{userNickname}
+        , userPhone = #{userPhone}
+        where userId = #{userId};
+    </update>
+    <delete id="deleteUserGenre" parameterType="int">
+        delete from userGenre
+        where userId = #{userId}
+    </delete>
+    <insert id="insertUserGenre" parameterType="genreDto">
+        insert into userGenre (genrId, userId) values
+        <foreach collection="list" item="item" separator=",">
+            (${item.genrId}, #{item.userId})
+        </foreach>
+    </insert>
 </mapper>

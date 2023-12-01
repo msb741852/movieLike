@@ -24,12 +24,13 @@ public class DetailController {
 
     @Autowired
     DetailService detailService;
+    @Autowired
+    ReviewDao reviewDao;
 
     @GetMapping("/movie/detail")
     public String showMovieDetail(Integer movId, Model model, HttpSession session) {
         if(session.getAttribute("liogdin") != null) {
             int currId = (Integer)session.getAttribute("liogdin");
-
             // 해당 영화에 찜 눌렀는지 확인
             MyListDto myListDto = new MyListDto(movId, currId);
             if(detailService.checkMyList(myListDto) == 1) {
@@ -111,24 +112,22 @@ public class DetailController {
             }
             reviewDto.setUserId(curr_id);
             detailService.writeReview(reviewDto);
-            return new ResponseEntity<String> ("봤어요 통신 성공!", HttpStatus.OK); // 200
+            return new ResponseEntity<String> ("리뷰 등록 통신 성공!", HttpStatus.OK); // 200
         } catch (Exception e) {
             e.printStackTrace();
-            return new ResponseEntity<String> ("봤어요 통신 실패!", HttpStatus.BAD_REQUEST); // 400
+            return new ResponseEntity<String> ("리뷰 등록 실패!", HttpStatus.BAD_REQUEST); // 400
         }
     }
 
 
     @PostMapping("/review/read/all")
     @ResponseBody
-    public ResponseEntity<List<ReviewDto>> readReviewAll(@RequestBody Map<String, Integer> map, HttpSession session, Model model) {
+    public ResponseEntity<List<ReviewDto>> readReviewAll(@RequestBody Map<String, Integer> map, HttpSession session) {
         try {
-            System.out.println(map);
             List<ReviewDto> rvAllresult = detailService.selectMovieReviewList(map);
             // 위에서 해당 영화의 리뷰 리스트를 가져온다.
             // 리뷰 리스트에서 rvId를 가져오고, 현재 로그인한 userId를 넘겨준다.
             Integer curr_id = (Integer)session.getAttribute("liogdin");
-            System.out.println("curr_id = " + curr_id);
             // 로그인 한 상태일 때,
             if(curr_id != null) {
                 Map<String, Integer> rvMap = new HashMap<>();
@@ -198,12 +197,27 @@ public class DetailController {
     @ResponseBody
     public ResponseEntity<String> updateReview(@RequestBody Integer rvId) {
         try {
-            System.out.println(rvId);
             detailService.deleteReview(rvId);
             return new ResponseEntity<String> ("리뷰 삭제 성공!", HttpStatus.OK); // 200
         } catch (Exception e) {
             e.printStackTrace();
             return new ResponseEntity<String> ("리뷰 삭제 실패유!", HttpStatus.BAD_REQUEST); // 400
+        }
+    }
+
+    @PostMapping("/review/confirm")
+    @ResponseBody
+    public ResponseEntity<Integer> confirmReview(@RequestBody Integer movId, HttpSession session) {
+        try {
+            System.out.println(movId);
+            Map<String, Integer> map = new HashMap<>();
+            map.put("movId", movId);
+            map.put("userId", (Integer) session.getAttribute("liogdin"));
+
+            return new ResponseEntity<Integer> (reviewDao.confirmReview(map), HttpStatus.OK); // 200
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new ResponseEntity<Integer> (HttpStatus.BAD_REQUEST); // 400
         }
     }
 }

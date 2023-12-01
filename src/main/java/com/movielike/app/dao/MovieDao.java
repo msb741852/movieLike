@@ -68,6 +68,9 @@ public class MovieDao {
     public List<MovieDto> selectSearchMov(Map search) {
         return session.selectList(namespace+"selectSearchMov" , search);
     }
+    public List<MovieDto> selectSearchMovAge(Map search) {
+        return session.selectList(namespace+"selectSearchMovAge" , search);
+    }
 
 /////////////////////////////////
 ////////// 상세 페이지 ///////////
@@ -91,8 +94,15 @@ public class MovieDao {
         return session.update(namespace + "updateSearchCnt", movId);
     }
 
-    public int updateMovieScore(ReviewDto reviewDto) {
-        return session.update(namespace + "updateMovieScore", reviewDto);
+    public int updateMovieScore(Map<String, Integer> map) {
+        return session.update(namespace + "updateMovieScore", map);
+    }
+
+    /////////////////////////////////
+    ////////// 마이 페이지 ///////////
+    /////////////////////////////////
+    public int updateScore(List<Map<String, Integer>> mapList) {
+        return session.update(namespace + "updateScore", mapList);
     }
 }
 

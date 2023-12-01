@@ -13,6 +13,5 @@ function my_liked_data() {
         $(my_liked_item).appendTo('.content_box')
     }
 }
-
 my_liked_data();
 my_liked_data();

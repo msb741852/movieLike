@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal" created-in="IU-232.9921.47">
-    <data-source name="@localhost" uuid="88d56e49-149f-454f-80ce-c8c292469c0a">
-      <database-info product="MySQL" version="8.0.34" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.25 (Revision: 08be9e9b4cba6aa115f9b27b215887af40b159e0)" dbms="MYSQL" exact-version="8.0.34" exact-driver-version="8.0">
+    <data-source name="@localhost" uuid="886052da-7a42-4c05-aec4-8ac8b0edb81e">
+      <database-info product="MySQL" version="8.1.0" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.25 (Revision: 08be9e9b4cba6aa115f9b27b215887af40b159e0)" dbms="MYSQL" exact-version="8.1.0" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
-        <jdbc-catalog-is-schema>true</jdbc-catalog-is-schema>
       </database-info>
-      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
       <secret-storage>master_key</secret-storage>
-      <user-name>root</user-name>
+      <user-name>bitstudy</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" qname="movielike" />
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="movielike" />
+          </node>
         </introspection-scope>
       </schema-mapping>
     </data-source>

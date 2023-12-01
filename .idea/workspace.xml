@@ -9,89 +9,202 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76222612-11bf-4cc6-a51f-f4aa257a2d96" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/controller/ChartController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/controller/DetailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/controller/MyListController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/dao/MyListDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/dao/UserDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/dao/WatchedMovieDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/domain/MyListDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/domain/UserDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/domain/WatchedMovieDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/service/DetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/myListMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/userMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/watchedMovieMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Movie_Like_detail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Movie_Like_find.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/find_id.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/find_password.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/find_id.css" afterDir="false" />
+    <list default="true" id="bdeb4651-8610-4231-90a2-df2c150485cb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Movie_Like_mypage.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/footer.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/font/TmoneyRoundWindExtraBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/tv.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/88d56e49-149f-454f-80ce-c8c292469c0a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/88d56e49-149f-454f-80ce-c8c292469c0a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/88d56e49-149f-454f-80ce-c8c292469c0a/storage_v2/_src_/schema/movielike.x9bTRg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/88d56e49-149f-454f-80ce-c8c292469c0a/storage_v2/_src_/schema/movielike.x9bTRg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/88d56e49-149f-454f-80ce-c8c292469c0a.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/88d56e49-149f-454f-80ce-c8c292469c0a/storage_v2/_src_/schema/deliverycompany.CYZMWA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/88d56e49-149f-454f-80ce-c8c292469c0a/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/88d56e49-149f-454f-80ce-c8c292469c0a/storage_v2/_src_/schema/movielike.x9bTRg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/88d56e49-149f-454f-80ce-c8c292469c0a/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/88d56e49-149f-454f-80ce-c8c292469c0a/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/88d56e49-149f-454f-80ce-c8c292469c0a/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.project" beforeDir="false" afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/controller/ChartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/controller/ChartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/controller/DetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/controller/DetailController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/controller/KeywordController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/controller/KeywordController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/controller/ListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/controller/ListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/controller/MyListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/controller/MyListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/dao/MovieDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/dao/MovieDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/dao/MyListDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/dao/MyListDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/dao/ReviewDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/dao/ReviewDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/dao/WatchedMovieDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/dao/WatchedMovieDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/domain/MovieDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/domain/MovieDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/domain/MyListDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/domain/MyListDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/domain/OttDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/domain/OttDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/domain/PersonDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/domain/PersonDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/domain/ReviewDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/domain/ReviewDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/domain/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/domain/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/domain/WatchedMovieDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/domain/WatchedMovieDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/service/CommonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/service/CommonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/service/DetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/service/DetailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/service/IndexService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/service/IndexService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/service/KeywordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/service/KeywordService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/service/ListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/service/ListService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/movieMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/movieMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/myListMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/myListMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/reviewMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/reviewMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/userMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/watchedMovieMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/watchedMovieMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/root-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Movie_Like_detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Movie_Like_find.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Movie_Like_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Movie_Like_detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Movie_Like_find.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Movie_Like_find.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Movie_Like_join.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Movie_Like_keyword.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Movie_Like_keyword.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Movie_Like_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Movie_Like_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Movie_Like_login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/Movie_Like_mypage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/find_id.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/find_id.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/find_password.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/find_password.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/common.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/detail_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/detail_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/find_id.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/find_id.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/find_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/find_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/join_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/join_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/keyword_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/keyword_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/list_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/list_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/login_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/login_page.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/main_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/main_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/my_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/my_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/profile_img.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/profile_img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/find_all.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/find_all.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/join.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/join.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/keyword.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/keyword.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/list_item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/list_item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/main_item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/main_item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/my_liked.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/my_liked.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/my_watched.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/my_watched.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/mypage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/mypage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/movielike/app/dao/MovieDaoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/movielike/app/dao/MovieDaoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/controller/ChartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/controller/ChartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/controller/DetailController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/controller/DetailController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/controller/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/controller/KeywordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/controller/KeywordController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/controller/ListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/controller/ListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/controller/MyListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/controller/MyListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/dao/MovieDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/dao/MovieDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/dao/MyListDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/dao/MyListDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/dao/ReviewDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/dao/ReviewDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/dao/WatchedMovieDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/dao/WatchedMovieDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/domain/MovieDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/domain/MovieDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/domain/MyListDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/domain/MyListDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/domain/OttDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/domain/OttDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/domain/PersonDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/domain/PersonDto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/domain/ReviewDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/domain/ReviewDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/domain/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/domain/UserDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/domain/WatchedMovieDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/domain/WatchedMovieDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/service/CommonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/service/CommonService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/service/DetailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/service/DetailService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/service/IndexService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/service/IndexService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/service/KeywordService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/service/KeywordService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/service/ListService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/service/ListService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/com/movielike/app/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/log4j.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/mapper/movieMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/mapper/movieMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/mapper/myListMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/mapper/myListMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/mapper/reviewMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/mapper/reviewMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/mapper/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/mapper/userMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/mapper/watchedMovieMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/mapper/watchedMovieMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/classes/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/spring/appServlet/servlet-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/spring/appServlet/servlet-context.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/spring/root-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/spring/root-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/Movie_Like_detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/Movie_Like_find.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/Movie_Like_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/Movie_Like_detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/Movie_Like_find.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/Movie_Like_find.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/Movie_Like_join.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/Movie_Like_keyword.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/Movie_Like_keyword.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/Movie_Like_list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/Movie_Like_list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/Movie_Like_login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/Movie_Like_mypage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/find_id.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/find_id.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/find_password.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/find_password.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/views/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/css/common.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/css/detail_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/css/detail_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/css/find_id.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/css/find_id.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/css/find_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/css/find_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/css/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/css/join_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/css/join_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/css/keyword_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/css/keyword_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/css/list_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/css/list_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/css/login_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/css/login_page.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/css/main_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/css/main_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/css/my_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/css/my_page.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/img/profile_img.png" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/img/profile_img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/js/detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/js/detail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/js/find_all.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/js/find_all.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/js/join.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/js/join.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/js/keyword.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/js/keyword.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/js/list_item.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/js/list_item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/js/main_item.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/js/main_item.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/js/my_liked.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/js/my_liked.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/js/my_watched.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/js/my_watched.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/js/mypage.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/app-1.0.0-BUILD-SNAPSHOT/resources/js/mypage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/controller/ChartController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/controller/ChartController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/controller/DetailController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/controller/DetailController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/controller/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/controller/KeywordController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/controller/KeywordController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/controller/ListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/controller/ListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/controller/MyListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/controller/MyListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/dao/MovieDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/dao/MovieDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/dao/MyListDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/dao/MyListDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/dao/ReviewDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/dao/ReviewDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/dao/WatchedMovieDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/dao/WatchedMovieDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/domain/MovieDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/domain/MovieDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/domain/MyListDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/domain/MyListDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/domain/OttDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/domain/OttDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/domain/PersonDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/domain/PersonDto.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/domain/ReviewDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/domain/ReviewDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/domain/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/domain/UserDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/domain/WatchedMovieDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/domain/WatchedMovieDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/service/CommonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/service/CommonService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/service/DetailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/service/DetailService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/service/IndexService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/service/IndexService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/service/KeywordService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/service/KeywordService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/service/ListService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/service/ListService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/movielike/app/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/movielike/app/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/movieMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/movieMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/myListMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/myListMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/reviewMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/reviewMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/userMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/userMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/watchedMovieMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/watchedMovieMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/movielike/app/dao/MovieDaoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/movielike/app/dao/MovieDaoTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -103,91 +216,66 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 8
+  &quot;associatedIndex&quot;: 4
 }</component>
-  <component name="ProjectId" id="2YUBtHBBU4ZzksMWY61O6otKhMb" />
+  <component name="ProjectId" id="2Yn2wqZuwC6ydWUBySuZtGp607K" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/user1/Documents/카카오톡 받은 파일/movie-feat-new (2)/movie-feat-new",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "프로젝트",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "settings.javascript.linters.tslint",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/soop/Desktop/취업/포트폴리오/movieLikeProject/movieLikeProject&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\user\Desktop\portfolio\github\movieLike\src\main\resources\mapper" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/views" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/js" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/img" />
+      <recent name="$PROJECT_DIR$/src/main/resources/mapper" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\user1\Documents\GitHub\movieLike\src\main\webapp\WEB-INF\views" />
-      <recent name="C:\Users\user1\Documents\GitHub\movieLike\src\main\webapp\resources\css" />
-      <recent name="C:\Users\user1\Documents\GitHub\movieLike\src\main\webapp\resources\js" />
-      <recent name="C:\Users\user1\Documents\GitHub\movieLike\src\main\resources\mapper" />
-      <recent name="C:\Users\user1\Documents\GitHub\movieLike\src\main\java\com\movielike\app\service" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/img" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/movielike/app/dao" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/font" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat 서버.Tomcat 9.0.82">
-    <configuration name="MovieDaoTest.selectMainBanner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.movielike.app.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.movielike.app.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.movielike.app.dao.MovieDaoTest" />
-      <option name="METHOD_NAME" value="selectMainBanner" />
-      <option name="TEST_OBJECT" value="method" />
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="movieLike" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MovieDaoTest.selectSearchMov" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="app" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.movielike.app.dao.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.movielike.app.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.movielike.app.dao.MovieDaoTest" />
-      <option name="METHOD_NAME" value="selectSearchMov" />
-      <option name="TEST_OBJECT" value="method" />
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="movieLike" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="Tomcat 9.0.82" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.82" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="app:war exploded">
@@ -197,7 +285,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="626ebfe5-d4fb-4435-a45a-2953a3b25c5d" />
+        <option name="BASE_DIRECTORY_NAME" value="f29622b1-0d0f-4b6e-bd4a-86ba46e46a6a" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -205,7 +293,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="11566" />
+        <option name="DEBUG_PORT" value="57971" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -274,44 +362,163 @@
         </option>
       </method>
     </configuration>
-    <list>
-      <item itemvalue="JUnit.MovieDaoTest.selectSearchMov" />
-      <item itemvalue="JUnit.MovieDaoTest.selectMainBanner" />
-      <item itemvalue="Tomcat 서버.Tomcat 9.0.82" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.MovieDaoTest.selectSearchMov" />
-        <item itemvalue="JUnit.MovieDaoTest.selectMainBanner" />
-      </list>
-    </recent_temporary>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="2912ae74-156a-4332-8340-a7fc0a95df1a" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="57971" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="디폴트 작업">
-      <changelist id="76222612-11bf-4cc6-a51f-f4aa257a2d96" name="변경" comment="" />
-      <created>1700570492548</created>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bdeb4651-8610-4231-90a2-df2c150485cb" name="Changes" comment="" />
+      <created>1701147264239</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1700570492548</updated>
-      <workItem from="1700570493729" duration="10477000" />
-      <workItem from="1700612433670" duration="26067000" />
-      <workItem from="1700662067890" duration="4383000" />
-      <workItem from="1700697879272" duration="16208000" />
-      <workItem from="1700716863557" duration="542000" />
-      <workItem from="1700717415834" duration="11715000" />
-      <workItem from="1700738805594" duration="5145000" />
-      <workItem from="1700748898914" duration="1850000" />
-      <workItem from="1700785090819" duration="2077000" />
-      <workItem from="1700791220985" duration="5347000" />
+      <updated>1701147264239</updated>
+      <workItem from="1701147265610" duration="2990000" />
+      <workItem from="1701150331103" duration="69000" />
+      <workItem from="1701150464974" duration="131000" />
+      <workItem from="1701150865007" duration="24000" />
+      <workItem from="1701150925626" duration="9630000" />
+      <workItem from="1701160740774" duration="2896000" />
+      <workItem from="1701163686956" duration="6354000" />
+      <workItem from="1701179730152" duration="3820000" />
+      <workItem from="1701212930245" duration="1197000" />
+      <workItem from="1701215729176" duration="11223000" />
+      <workItem from="1701233165815" duration="1132000" />
+      <workItem from="1701234369097" duration="32293000" />
+      <workItem from="1701313208472" duration="4629000" />
+      <workItem from="1701335560746" duration="729000" />
+      <workItem from="1701391660103" duration="1269000" />
+      <workItem from="1701393260752" duration="1895000" />
+      <workItem from="1701395208914" duration="347000" />
+      <workItem from="1701398689551" duration="407000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="main" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

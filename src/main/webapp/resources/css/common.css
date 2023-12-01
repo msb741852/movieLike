@@ -1,10 +1,10 @@
 @font-face {
-    font-family: 'NPSfontBold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/NPSfontBold.woff2') format('woff2');
-    font-weight: 700;
+    font-family: 'TmoneyRoundWindExtraBold';
+    src: url('../font/TmoneyRoundWindExtraBold.ttf') format('woff');
+    font-weight: normal;
     font-style: normal;
 }
-#wrap { font-family: 'NPSfontBold'; }
+* { font-family: 'TmoneyRoundWindExtraBold'; }
 body{
     background-color: #222;
     margin: 0;
@@ -15,6 +15,9 @@ ul {
     padding: 0;
     margin: 0;
 }
-a { 
+a {
     text-decoration: none; color: inherit;
+}
+#wrap {
+    padding-top: 100px;
 }

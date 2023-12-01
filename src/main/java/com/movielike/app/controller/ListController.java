@@ -17,6 +17,7 @@ import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 @Controller
 public class ListController {
@@ -25,6 +26,10 @@ public class ListController {
 
     @GetMapping("/list/chart")
     public String showListMovie(String title, String val, String sort, String nowPage, HttpSession session, Model model){
+        if(Objects.equals(title, "search") && Objects.equals(val, "")){
+            model.addAttribute("error", "blank");
+            return "Movie_Like_list";
+        }
         List<MovieDto> movieList = listUpMovie(title, val, sort, nowPage, session);
 
         model.addAttribute("title", title);
@@ -53,10 +58,9 @@ public class ListController {
 
     public List<MovieDto> listUpMovie(String title, String val, String sort, String nowPage, HttpSession session){
         String userId = String.valueOf((Integer)session.getAttribute("liogdin"));
-        System.out.println("userId1 : " + userId);
         nowPage = (nowPage == null? "0" : nowPage);
         sort = (sort == null? "0" : sort);
-
+        val = (val == null ? null : val.replaceAll(" ", ""));
         List<MovieDto> movieList = service.listSearch(title, val, userId, nowPage, sort);
         System.out.println("movieList : " + movieList);
         return movieList;

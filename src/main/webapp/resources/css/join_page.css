@@ -1,3 +1,6 @@
+#wrap img {
+    width: 100%; height: 100%;
+}
 .login_bg {
     width: 100%;
     height: 100vh;
@@ -7,7 +10,7 @@
 .container {
     width: 100%;
     overflow: hidden;
-    padding: 70px 0;
+    padding: 20px 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -69,6 +72,7 @@ th {
 .th1 {
     width: 30%;
     color: #fff;
+    line-height: 25px;
 }
 tr {
     border: 1px solid #fff;
@@ -81,6 +85,7 @@ tr {
     color: #fff;
     border: none;
     cursor: pointer;
+    border-radius: 10px;
 }
 .genre {
     display: inline-block;
@@ -97,6 +102,27 @@ tr {
 .genre_checkbox {
     display: none;
 }
+#genre1:hover + .genre_label_chk .genre,
+#genre2:hover + .genre_label_chk .genre,
+#genre3:hover + .genre_label_chk .genre,
+#genre4:hover + .genre_label_chk .genre,
+#genre5:hover + .genre_label_chk .genre,
+#genre6:hover + .genre_label_chk .genre,
+#genre7:hover + .genre_label_chk .genre,
+#genre8:hover + .genre_label_chk .genre,
+#genre9:hover + .genre_label_chk .genre,
+#genre10:hover + .genre_label_chk .genre,
+#genre11:hover + .genre_label_chk .genre,
+#genre12:hover + .genre_label_chk .genre,
+#genre13:hover + .genre_label_chk .genre,
+#genre14:hover + .genre_label_chk .genre,
+#genre15:hover + .genre_label_chk .genre,
+#genre16:hover + .genre_label_chk .genre,
+#genre17:hover + .genre_label_chk .genre,
+#genre18:hover + .genre_label_chk .genre,
+#genre19:hover + .genre_label_chk .genre {
+    background: #A785EF;
+}
 #genre1:checked + .genre_label_chk .genre,
 #genre2:checked + .genre_label_chk .genre,
 #genre3:checked + .genre_label_chk .genre,
@@ -104,27 +130,96 @@ tr {
 #genre5:checked + .genre_label_chk .genre,
 #genre6:checked + .genre_label_chk .genre,
 #genre7:checked + .genre_label_chk .genre,
-#genre8:checked + .genre_label_chk .genre {
+#genre8:checked + .genre_label_chk .genre,
+#genre9:checked + .genre_label_chk .genre,
+#genre10:checked + .genre_label_chk .genre,
+#genre11:checked + .genre_label_chk .genre,
+#genre12:checked + .genre_label_chk .genre,
+#genre13:checked + .genre_label_chk .genre,
+#genre14:checked + .genre_label_chk .genre,
+#genre15:checked + .genre_label_chk .genre,
+#genre16:checked + .genre_label_chk .genre,
+#genre17:checked + .genre_label_chk .genre,
+#genre18:checked + .genre_label_chk .genre,
+#genre19:checked + .genre_label_chk .genre {
     background: #A785EF;
 }
-.warning_box {
+.genre_sub {
+    font-size: 14px;
+}
+#id_ok{
+    color: #34aadc;
     display: none;
 }
-.error {
+#id_already{
+    color: rgb(255, 120, 203);
+    display: none;
+}
+#nick_ok{
+    color: #34aadc;
+    display: none;
+}
+#nick_already{
+    color: rgb(255, 120, 203);
+    display: none;
+}
+#ph_ok{
+    color: #34aadc;
+    display: none;
+}
+#ph_already{
+    color: rgb(255, 120, 203);
+    display: none;
+}
+p{margin:0;}
+#hp1{
+    background-color: #fff;
+}
+.login_btn:disabled {
+    background-color: rgb(128, 128, 128);
+    cursor: not-allowed;
+}
+.confirm_sub {
     font-size: 12px;
-    text-align: left;
-    padding: 5px;
-    float: left;
-    color: #ff3737b8;
-}
-.warning {
-    width: 20px;
-    height: 20px;
-    float: left;
 }
 
-/* 
-input:invalid{outline: 1px solid #A785EF;}
-
-input:valid{outline: 1px solid #fff;} 
-*/
+@media screen and (min-width: 280px) and (max-width: 480px) {
+    #wrap {
+        width: 100%;
+    }
+    .logo {
+        width: 200px;
+    }
+    .title {
+        font-size: 1.3em;
+    }
+    .join_form {
+        width: 80%;
+        padding: 10px;
+    }
+    .th1 {
+        width: 28%;
+        font-size: 0.8em;
+    }
+    .login_input {
+        width: 100%;
+        padding: 0.5em;
+        font-size: 0.8em;
+    }
+    .phone_input {
+        width: calc((100% - 10px) / 3);
+        padding: 0.5em;
+        font-size: 0.8em;
+    }
+    .birthday {
+        width: calc((100% - 10px) / 3);
+        padding: 0.5em;
+        font-size: 0.8em;
+    }
+    .genre_label_chk {
+        font-size: 0.8em;
+    }
+    input::placeholder {
+        font-size: 10px;
+    }
+}

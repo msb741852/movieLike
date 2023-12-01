@@ -1,12 +1,16 @@
 #wrap img {
     width: 100%; height: 100%;
 }
+#wrap {
+    position: relative;
+}
 .container {
     width: 100%;
     overflow: hidden;
     background-color: #222;
-    padding-bottom: 200px;
+    padding: 0;
     color: #fff;
+    position: static !important;
 }
 .content {
     width: 700px;
@@ -32,22 +36,26 @@
     top: 0;
     right: 0;    
     margin: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 80px;
+    padding-left: 110px;
+    cursor: pointer;
+}
+.update_hover_box {
+    width: 150px;
+    transform: translateX(-130px);
+    display: none;
 }
 .my_change_btn, .my_end_btn {
-    width: 130px;
     text-align: center;
     background: #A785EF;
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
     margin-top: 10px;
-    transform: translateX(-140px);
-    opacity: 0;
+    cursor: pointer;
 }
-.update_icon:hover .my_change_btn, 
-.update_icon:hover .my_end_btn {
-    opacity: 1;
+.update_icon:hover .update_hover_box {
+    display: block;
 }
 .btn_box {
     width: 400px;
@@ -69,129 +77,21 @@
 }
 .my_txt {
     text-align: center;
-    margin-top: 15px;
+    margin-top: 5px;
 }
+
 .chart_box {
-    height: 350px;
-    color: #ffffff;
-    padding: 20px 10px;
+    width: 700px;
+    height: 390px;
+    margin: 0 auto;
     background: #555;
+    padding: 50px 100px;
+    box-sizing: border-box;
 }
 .chart_title {
     text-align: center;
-    padding: 30px;
-}
-
-
-
-.blind{
-    position:absolute;
-    clip:rect(0 0 0 0);
-    width:1px;
-    height:1px;
-    overflow:hidden;
-    }
-    .vertical_chart_box{
-    position:relative;
-    width: 500px;
-    margin: 0 auto;
-    .chart_box{
-        position:relative;
-        margin-bottom:45px;
-        padding-left:20px;
-        box-sizing:border-box;
-        height:200px;
-    }
-    /* .axis_y{
-        display:-webkit-flex;
-        display:-ms-flex;
-        display:-o-flex;
-        display:flex;
-        flex-direction:column-reverse;
-        align-items:center;
-        justify-content:space-between;
-        position:absolute;
-        top:0;
-        left:0;
-        margin:0;
-        padding:0;
-        width:20px;
-        height:100%;
-        font-size:12px;
-        color:#fff;
-        &:before{
-        content:'';
-        position:absolute;
-        top:5px;
-        bottom:0;
-        right:0;
-        width:1px;
-        background:#d3d3d3;
-        }
-    } */
-    .axis_x{
-        display:-webkit-flex;
-        display:-ms-flex;
-        display:-o-flex;
-        display:flex;
-        justify-content:center;
-        position:relative;
-        padding:0;
-        box-sizing:border-box;
-        height:100%;
-        border-bottom:1px solid #d3d3d3;
-        .item{
-        flex:1;
-        position:relative;
-        .text_box{
-            position:absolute;
-            bottom:-43px;
-            left:50%;
-            text-align:center;
-            -webkit-transform:translate(-50%,0);
-            -ms-transform:translate(-50%,0);
-            -o-transform:translate(-50%,0);
-            transform:translate(-50%,0);
-            .rating{
-            display:block;
-            font-size:12px;
-            line-height:19px;
-            color:#fff;
-            }
-        }
-        }
-        .graph{
-        display:-webkit-flex;
-        display:-ms-flex;
-        display:-o-flex;
-        display:flex;
-        flex-direction:column-reverse;
-        position:relative;
-        margin:0 auto;
-        padding:0;
-        width:35px;
-        height:100%;
-        background:#e8e8e8;
-        border-radius:3px 3px 0 0;
-        overflow:hidden;
-        .time{
-            display:block;
-            position:relative;
-            margin-bottom:-4px;
-            padding-top:4px;
-            box-sizing:content-box;
-            width:100%;
-            border-radius:3px 3px 0 0;
-            &.data{
-            background:#A785EF;
-            z-index:3;
-            }
-        }
-        }
-        button.graph{
-        border:0;
-        }
-    }
+    padding-bottom: 30px;
+    font-size: 20px;
 }
 
 .review_box {
@@ -209,15 +109,20 @@
     background: #d3d3d333;
     margin: 10px 0;
 }
-.review_title_box { overflow: hidden;}
+.review_title_box { 
+    overflow: hidden;
+    font-size: 18px;
+}
 .myreview_title_txt {
     font-size: 25px;
 }
 .select_r {
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 0;
     outline: none;
+    padding: 4px 3px;
+    font-size: 12px;
 }
 .nickname {
     float: left;
@@ -236,29 +141,220 @@
 }
 .write_date {
     float: right;
+    font-size: 14px;
 }
 .review_content {
-    margin: 10px 0 20px;
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px;
+    box-sizing: border-box;
+    border: none;
+    background: none;
+    outline: none;
+    color: #b6b6b6;
+    border-radius: 10px;
+    line-height: 18px;
+    resize: none;
 }
-.like_box {
+.review_movie_name {
+    float: left;
+}
+.update_box {
+    display: flex;
+    gap: 7px;
+    color: gray;
+    font-size: 14px;
     float: right;
 }
-.like_icon, .like_bin {
-    width: 25px;
-    height: 25px;
+.update_btn {
+    cursor: pointer;
+}
+.like_box {
     float: left;
-    margin-right: 10px;
+    margin-left: 20px;
+}
+.like_icon, .like_bin {
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-right: 5px;
 }
 .like_cnt {
     float: left;
     line-height: 25px;
 }
-
+.page_box {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.num, .prev_btn, .next_btn {
+    cursor: pointer;
+}
 
 
 .img_box {
     width: 30vw;
     position: absolute;
-    bottom: 0;
+    top: 300px;
     right: 0;
+    /* animation: gif_move 10s; */
+}
+
+
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+    z-index: 9999;
+    
+}
+.popup_content {
+    width: 400px;
+    padding: 20px;
+    background-color: #555;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.user_update_btn {
+    width: 80px;
+    padding: 10px;
+    margin-top: 30px;
+    background: #A785EF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+@keyframes gif_move {
+    0% {
+        bottom: 0;
+        right: 0;
+        transform: rotate(0);
+    }
+    50% {
+        bottom: 0;
+        left: 0;
+        transform: rotate(180deg);
+    }
+    100% {
+        top: 10%;
+        right: 0%;
+        transform: rotate(0);
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 480px) {
+    .content {
+        width: 80%;
+        margin: 20px auto;
+    }
+    .update_hover_box {
+        width: 110px;
+        transform: translateX(-90px);
+    }
+    .popup_content {
+        width: 320px;
+    }
+    input::placeholder {
+        font-size: 10px;
+    }
+    .my_change_btn, .my_end_btn {
+        width: 70px;
+        font-size: 10px;
+    }
+    .genre {
+        font-size: 0.8em;
+    }
+    .nickname_txt {
+        font-size: 1em;
+    }
+    .user_id {
+        font-size: 0.7em;
+    }
+
+    .btn_box {
+        width: 100%;
+        height: 100px;
+        margin: 30px 0;
+    }
+    .my_review_cnt, .my_watched_cnt, .my_like_cnt {
+        font-size: 1.6em;
+    }
+    .my_txt {
+        font-size: 0.8em;
+    }
+
+    .chart_box {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 0.7;
+        padding: 1.5em;
+    }
+    .chart_title {
+        font-size: 1.3em;
+    }
+    .review_box {
+        margin: 30px 0;
+    }
+    .myreview_title_txt {
+        font-size: 1.3em;
+    }
+    .select_r {
+        top: 10px;
+    }
+    .nickname {
+        font-size: 0.9em;
+    }
+    .star_icon1 {
+        width: 16px;
+        height: 16px;
+    }
+    .movie_avg1 {
+        margin-top: 2px;
+        font-size: 0.8em;
+    }
+    .write_date {
+        font-size: 0.5em;
+    }
+    .review_content {
+        margin: 5px 0;
+        font-size: 0.7em;
+    }
+    .like_icon, .like_bin {
+        width: 20px;
+        height: 20px;
+    }
+    .like_cnt {
+        font-size: 0.6em;
+    }
+    .img_box {
+        display: none;
+    }
+    .update_box {
+        font-size: 10px;
+    }
+    .swal2-popup {
+        transform: scale(0.7);
+    }
+    .swal2-title {
+        font-size: 1.3em !important;
+    }
+}
+
+#swal2-content {
+    color: red;
 }

@@ -15,4 +15,13 @@
     <delete id="deleteMyList" parameterType="myListDto">
         delete from mylist where movId = #{movId} and userId = #{userId}
     </delete>
+
+    <!-- 키워드 찾기 무비 리스트 출력 -->
+    <select id="selectMyList" resultType="myListDto" parameterType="myListDto">
+        select * from mylist WHERE userId = #{userId}
+    </select>
+
+    <delete id="deleteAllMyList" parameterType="int">
+        delete from mylist where userId = #{userId}
+    </delete>
 </mapper>

@@ -26,26 +26,29 @@ public class ListService {
         search.put("val", val);
         search.put("sort", sort);
         search.put("nowPage", nowPage);
-        if (title == "year" ) {
+        if (title.equals("year") ) {
+            System.out.println("year에 왔음 :: ");
             int year = Integer.parseInt(val);
-            if (val == "1989"){
+            if (val.equals("1989")){
                 search.put("endYear", (year + 1) + "0101");
             }else{
                 search.put("startYear", year + "0101");
                 search.put("endYear", (year + 10) + "0101");
             }
-        } else if (title == "age" ) {
+        } else if (title.equals("age") ) {
             int age = Integer.parseInt(val);
             LocalDate nowDate = LocalDate.now(ZoneId.of("Asia/Seoul"));
             int year = nowDate.getYear();
 
-            if (val == "50"){
+            if (val.equals("50")){
                 search.put("startAge", (year - age - 10 + 1) + "0101");
             }else {
                 search.put("startAge", (year - age - 10 + 1) + "0101");
                 search.put("endAge", (year - age + 1) + "0101");
             }
-        } else if (title == "myView" || title == "myLike" || title == "myScore" ) {
+            System.out.println("search : " + search);
+            return movieDao.selectSearchMovAge(search);
+        } else if (title.equals("myView") || title.equals("myLike") || title.equals("myScore") ) {
             search.put("userId", userId);
         }
         System.out.println("search : " + search);

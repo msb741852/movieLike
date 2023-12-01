@@ -95,11 +95,11 @@ tr {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    /*background-color: rgba(0, 0, 0, 0.5);*/
     display: none;
 }
 .popup_content {
-    width: 400px;
+    width: 280px;
     padding: 20px;
     background-color: #555;
     border-radius: 20px;
@@ -142,7 +142,7 @@ tr {
         padding: 10px;
     }
     .th1 {
-        font-size: 12px;
+        font-size: 11px;
     }
     .login_input {
         width: 178px;
@@ -155,6 +155,9 @@ tr {
     .birthday {
         width: 56px;
         padding: 5px;
+        font-size: 8px;
+    }
+    input::placeholder {
         font-size: 10px;
     }
 }

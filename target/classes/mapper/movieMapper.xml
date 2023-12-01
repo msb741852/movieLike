@@ -60,7 +60,7 @@
                 order by m.movDate desc
             </when>
             <when test="sort == 1">
-                order by m.movScoreCnt, movScore
+                order by m.movScoreCnt desc, movScore desc
             </when>
         </choose>
         limit #{nowPage}, #{pageSize}
@@ -145,10 +145,10 @@
         </if>
         <choose>
             <when test="search == 'search'">
-                ORDER BY m.movSearchCnt
+                ORDER BY m.movSearchCnt desc
             </when>
             <otherwise>
-                ORDER BY m.movScoreCnt, m.movScore
+                ORDER BY m.movScoreCnt desc, m.movScore desc
             </otherwise>
         </choose>
         limit 0, 10;
@@ -173,8 +173,9 @@
                 <when test="title=='search'">
                     , person p, moviePerson mp
                     where ((m.movId = mp.movId) and (mp.perId = p.perId))
-                        and ( m.movName like concat('%',#{val},'%') or m.movNameEng like concat('%',#{val},'%')
-                        or p.perName like concat('%',#{val},'%') )
+                    and ( replace(m.movName, ' ', '') like concat('%', #{val}, '%')
+                    or replace(m.movNameEng, ' ', '') like concat('%', #{val}, '%')
+                    or replace(p.perName, ' ', '') like concat('%', #{val}, '%') )
                 </when>
                 <when test="title=='series'">
                     , series s
@@ -193,18 +194,6 @@
                         </when>
                         <otherwise>
                             where m.movDate BETWEEN STR_TO_DATE(#{startYear}, '%Y%m%d') and STR_TO_DATE(#{endYear}, '%Y%m%d')
-                        </otherwise>
-                    </choose>
-                </when>
-                <when test="title=='age'">
-                    , watchedMovie mw, user u
-                    where (u.userId = mw.userId and mw.movId = m.movId)
-                    <choose>
-                        <when test="val == '50'">
-                            and u.userBirth <![CDATA[<=]]> STR_TO_DATE(#{startAge}, '%Y%m%d')
-                        </when>
-                        <otherwise>
-                            and (u.userBirth BETWEEN STR_TO_DATE(#{startAge}, '%Y%m%d') and STR_TO_DATE(#{endAge}, '%Y%m%d'))
                         </otherwise>
                     </choose>
                 </when>
@@ -240,10 +229,30 @@
                 order by m.movDate desc
             </when>
             <when test="sort == 1">
-                order by m.movScoreCnt, movScore
+                order by m.movScoreCnt desc, movScore desc
             </when>
         </choose>
         limit ${nowPage}, 20
+    </select>
+<!--  리스트페이지 - 나이별  -->
+    <select id="selectSearchMovAge" parameterType="map" resultType="movieDto">
+        select DISTINCT m.movId, m.movName, m.movDate, m.movPoster, (m.movScore / m.movScoreCnt) movScore, m.movScoreCnt, w.movCount
+            from movie m,
+                (select m.movId, count(m.movId) as movCount
+                    from movie m, watchedMovie mw, user u
+                        where (u.userId = mw.userId and mw.movId = m.movId)
+                            <choose>
+                                <when test="val == '50'">
+                                    and u.userBirth <![CDATA[<=]]> STR_TO_DATE(#{startAge}, '%Y%m%d')
+                                </when>
+                                <otherwise>
+                                    and (u.userBirth BETWEEN STR_TO_DATE(#{startAge}, '%Y%m%d') and STR_TO_DATE(#{endAge}, '%Y%m%d'))
+                                </otherwise>
+                            </choose>
+                    group by m.movId) w
+            where w.movId = m.movId
+            order by w.movCount desc, m.movScoreCnt desc, movScore desc
+        limit 0, 20;
     </select>
 
     <!-- ....................................... -->
@@ -277,6 +286,13 @@
     </update>
     <!-- 영화 리뷰 점수 합산 -->
     <update id="updateMovieScore" parameterType="map">
-        update movie set movScore = movScore + #{rvScore}, movScoreCnt = movScoreCnt + 1 where movId = #{movId}
+        update movie set movScore = movScore + #{rvScore}, movScoreCnt = movScoreCnt + #{pmOne} where movId = #{movId}
+    </update>
+    <update id="updateScore" parameterType="java.util.List">
+        <foreach collection="list" item="item" separator=";" index="index">
+            update movie
+            set movScore = (movScore - #{item.rvScore}), movScoreCnt = (movScoreCnt - 1)
+            where movId = #{item.movId}
+        </foreach>
     </update>
 </mapper>

@@ -50,9 +50,6 @@
     gap: 20px;
     flex-wrap: wrap;
 }
-.content_list4 {
-    width: calc(100% / 4);
-}
 .content_list5 {
     width: calc((100% - 20px * 4) / 5);
     height: 170px;
@@ -60,12 +57,8 @@
     position: relative;
     overflow: hidden;
 }
-.content_list6 {
-    width: calc((100% - 20px * 5) / 6);
+.genre_height {
     height: 200px;
-    position: relative;
-    border-radius: 20px;
-    overflow: hidden;
 }
 .content_list {
     height: 300px;
@@ -184,6 +177,11 @@
     width: 100%;
     height: 100%;
     background: url(../img/war.jpg) no-repeat center / cover;
+}
+.tv {
+    width: 100%;
+    height: 100%;
+    background: url(../img/tv.jpg) no-repeat center / cover;
 }
 
 .content_list_title {
@@ -321,4 +319,36 @@
     opacity: 0.7;
     font-size: 25px;
     transition: all 0.5s;
+}
+
+@media screen and (min-width: 280px) and (max-width: 480px) {
+    .container {
+        padding-bottom: 70px;
+    }
+    .content {
+        width: 100%;
+        padding: 0 30px;
+        box-sizing: border-box;
+    }
+    .title_box {
+        margin-top: 30px;
+        height: 40px;
+    }
+    .title {
+        font-size: 1.3em;
+    }
+    .content_list_title {
+        font-size: 12px;
+        height: 35px;
+        line-height: 35px;
+    }
+    .content_list5 {
+        width: calc((100% - 20px * 1) / 2);
+        height: auto;
+        aspect-ratio: 1 / 0.66;
+        border-radius: 5px;
+    }
+    .genre_height {
+        aspect-ratio: 1 / 1.3;
+    }
 }

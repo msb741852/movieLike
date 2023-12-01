@@ -1,10 +1,12 @@
 package com.movielike.app.dao;
 
 import com.movielike.app.domain.ReviewDto;
+import com.movielike.app.domain.ReviewScoreDto;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -54,5 +56,34 @@ public class ReviewDao {
 
     public int deleteReview(int rvId) {
         return session.delete(namespace + "deleteReview", rvId);
+    }
+    public int confirmReview(Map<String, Integer> map) {
+        return session.selectOne(namespace + "confirmReview", map);
+    }
+
+    public Map<String, Integer> selectRvScore(int rvId) {
+        return session.selectOne(namespace + "selectReviewScore", rvId);
+    }
+
+    public List<ReviewDto> selectReview(HashMap param) {
+        return session.selectList(namespace + "selectReview", param);
+    }
+
+    public Integer selectReviewCount(HashMap param) {
+        return session.selectOne(namespace + "selectReviewCount", param);
+    }
+
+    public List<ReviewScoreDto> selectReviewScore(ReviewDto reviewDto) {
+        return session.selectList(namespace + "selectReviewGroupByScore", reviewDto);
+    }
+
+    public List<Map<String, Integer>> selectUserReview(int userId) {
+        return session.selectList(namespace + "selectUserReview", userId);
+    }
+    public int deleteAllReview(int userId) {
+        return session.delete(namespace + "deleteAllReview", userId);
+    }
+    public int deleteAllReviewLike(int userId) {
+        return session.delete(namespace + "deleteAllReviewLike", userId);
     }
 }

@@ -6,6 +6,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public class WatchedMovieDao {
 
@@ -29,5 +31,14 @@ public class WatchedMovieDao {
 
     public int deleteWatchedMovie(WatchedMovieDto watchedMovieDto) {
         return session.delete(namespace + "deleteWatchedMovie", watchedMovieDto);
+    }
+
+    ///////////// 정선
+    public List<WatchedMovieDto> WatchedMovie(WatchedMovieDto watchedMovieDto) {
+        return session.selectList(namespace + "selectWatchedMovie", watchedMovieDto);
+    }
+
+    public int deleteAllWatchedMovie(int userId) {
+        return session.delete(namespace + "deleteAllWatchedMovie", userId);
     }
 }

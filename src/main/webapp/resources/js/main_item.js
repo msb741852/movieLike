@@ -13,15 +13,14 @@ $(document).ready(function() {
                 movie_item += (ranking == "ranking" ? `<div class=\"ranking\">${i+1}</div>` : "");
             }else if(viewSize == 5){ //메인배너
                 src=""
-                movie_item = `<a href="/${c_path}/movie/detail?movId=${movie.movId}">
+                movie_item = `  <a href="/${c_path}/movie/detail?movId=${movie.movId}"></a>
                                 <iframe width="100%" height="100%"
                                     src="https://www.youtube.com/embed/${movie.movTrailer}?si=MLICGmo6npmC-CJj&amp;controls=0&autoplay=1&loop=1&rel=0&mute=1&playlist=${movie.movTrailer}"
                                     title="${movie.movName}"
                                     frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                     allowfullscreen
-                                ></iframe>
-                                </a>`;
+                                ></iframe>`;
             }else{
                 movie_item = `<div class="poster" data-movId="${movie.movId}">
                                     <a href="/${c_path}/movie/detail?movId=${movie.movId}" class="poster">
@@ -50,7 +49,7 @@ $(document).ready(function() {
         let movId = $(this).data("movid");
         location.href = "/" + c_path + "/movie/detail?movId="+movId;
     });
-    
+
 // 검색버튼 눌렀을 때, 엔터쳤을 때 리스트 페이지로 이동
     $(".search_bar").on('click', '.s_icon', function(){
         location.href = "/" + c_path + '/list/chart?title=search&val=' + $(".search").val();
@@ -77,12 +76,23 @@ $(document).ready(function() {
 
 // 순위(스와이퍼)
     var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 5, // 칸 수
-        spaceBetween: 70,
+        slidesPerView: 2.3, // 칸 수
+        spaceBetween: 30,
+        autoHeight : true,
         // freeMode: true,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
+        },
+        breakpoints: {
+            768: {
+                slidesPerView: 4,  //브라우저가 768보다 클 때
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 5,  //브라우저가 1024보다 클 때
+                spaceBetween: 70,
+            },
         },
         // Navigation arrows
         navigation: {
@@ -95,7 +105,7 @@ $(document).ready(function() {
     });
 
 
-// 메인베너 스와이퍼
+// 메인베너
     var idx_lgth = $(".main_banner>div").length;
     var srt = 1;
     var idx = 0;
@@ -107,7 +117,7 @@ $(document).ready(function() {
         $(".main_banner>div").eq(idx).addClass('on').siblings().removeClass('on');
     });
 
-    var AutoSlide = setInterval(AutoRun, 2000);
+    var AutoSlide = setInterval(AutoRun, 5000);
 
     function AutoRun(){
 
@@ -125,7 +135,7 @@ $(document).ready(function() {
         $(".left_btn").css({opacity : '1'});
     });
     $(".main_banner").mouseleave(function(){
-        AutoSlide = setInterval(AutoRun, 2000);
+        AutoSlide = setInterval(AutoRun, 5000);
         $(".right_btn").css({opacity : '0'});
         $(".left_btn").css({opacity : '0'});
     });

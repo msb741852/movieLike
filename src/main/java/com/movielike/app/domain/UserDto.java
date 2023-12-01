@@ -8,7 +8,7 @@ public class UserDto {
     private String userPw;
     private String userName;
     private Date userBirth;
-    private String userNickName;
+    private String userNickname;
     private String userPhone;
     private Date userRegDate;
 
@@ -61,12 +61,12 @@ public class UserDto {
         this.userBirth = userBirth;
     }
 
-    public String getUserNickName() {
-        return userNickName;
+    public String getUserNickname() {
+        return userNickname;
     }
 
-    public void setUserNickName(String userNickName) {
-        this.userNickName = userNickName;
+    public void setUserNickname(String userNickname) {
+        this.userNickname = userNickname;
     }
 
     public String getUserPhone() {
@@ -93,7 +93,7 @@ public class UserDto {
                 ", userPw='" + userPw + '\'' +
                 ", userName='" + userName + '\'' +
                 ", userBirth=" + userBirth +
-                ", userNickName='" + userNickName + '\'' +
+                ", userNickname='" + userNickname + '\'' +
                 ", userPhone='" + userPhone + '\'' +
                 ", userRegDate=" + userRegDate +
                 '}';

@@ -28,7 +28,6 @@ public class DetailService {
         movieDto.setCountryNameList(movieDao.selectMovieCountry(movId));
         movieDto.setGenreList(movieDao.selectMovieGenre(movId));
         movieDto.setOttList(movieDao.selectMovieOtt(movId));
-        movieDto.setOttList(movieDao.selectMovieOtt(movId));
         movieDto.setActorList(movieDao.selectMoviePerson(movId));
         movieDao.updateSearchCnt(movId);
         return movieDto;
@@ -66,7 +65,11 @@ public class DetailService {
 
     public void writeReview(ReviewDto reviewDto) {
         reviewDao.insertReview(reviewDto);
-        movieDao.updateMovieScore(reviewDto);
+        Map<String, Integer> map = new HashMap<>();
+        map.put("rvScore", reviewDto.getRvScore());
+        map.put("pmOne", 1);
+        map.put("movId", reviewDto.getMovId());
+        movieDao.updateMovieScore(map);
     }
 
     public List<ReviewDto> selectMovieReviewList(Map<String, Integer> map) {
@@ -102,6 +105,13 @@ public class DetailService {
     }
 
     public void deleteReview(int rvId) {
+        Map<String, Integer> selectMap = reviewDao.selectRvScore(rvId);
+        Map<String, Integer> map = new HashMap<>();
+        map.put("rvScore", -selectMap.get("rvScore"));
+        map.put("pmOne", -1);
+        map.put("movId", selectMap.get("movId"));
+        movieDao.updateMovieScore(map);
         reviewDao.deleteReview(rvId);
     }
+
 }

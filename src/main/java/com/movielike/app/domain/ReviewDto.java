@@ -1,12 +1,12 @@
 package com.movielike.app.domain;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class ReviewDto {
     private int rvId;
     private int movId;
     private int userId;
-    private String userNickName;
+    private String userNickname;
     private int rvScore;
     private String rvContent;
     private Date rvRegDate;
@@ -61,12 +61,12 @@ public class ReviewDto {
         this.userId = userId;
     }
 
-    public String getUserNickName() {
-        return userNickName;
+    public String getUserNickname() {
+        return userNickname;
     }
 
-    public void setUserNickName(String userNickName) {
-        this.userNickName = userNickName;
+    public void setUserNickname(String userNickname) {
+        this.userNickname = userNickname;
     }
 
     public int getRvScore() {
@@ -147,7 +147,7 @@ public class ReviewDto {
                 "rvId=" + rvId +
                 ", movId=" + movId +
                 ", userId=" + userId +
-                ", userNickName=" + userNickName +
+                ", userNickname=" + userNickname +
                 ", rvScore=" + rvScore +
                 ", rvContent='" + rvContent + '\'' +
                 ", rvRegDate=" + rvRegDate +

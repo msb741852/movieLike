@@ -22,15 +22,6 @@ public class UserController {
 
     @Autowired
     UserService userService;
-
-    @GetMapping("/login")
-    public String login(HttpServletResponse response, HttpServletRequest request) throws Exception {
-        /* 세션 */
-        HttpSession session = request.getSession();
-        session.setAttribute("liogdin", 2);
-        return "redirect:/";
-    }
-
     @GetMapping("/show/findEmail")
     public String showFindEmail() {
         return "find_id";
@@ -63,14 +54,28 @@ public class UserController {
     @ResponseBody
     public ResponseEntity<String> showFindPassword(@RequestBody UserDto userDto) {
         try {
-            if(userService.updatePassword(userDto) == 1) {
-//                return new ResponseEntity<String>("비밀번호 수정하였습니다!",HttpStatus.OK);
-                return ResponseEntity.ok().build();
+            System.out.println(userDto.getUserName() + " " + userDto.getUserEmail() + " " + userDto.getUserPhone());
+            if(userService.selectUserInfo(userDto) == 1) {
+                return new ResponseEntity<String>("ok!",HttpStatus.OK);
             } else {
-                return ResponseEntity.badRequest().build();
+                return new ResponseEntity<String>(HttpStatus.BAD_REQUEST);
             }
         } catch (Exception e) {
-            return ResponseEntity.badRequest().build();
+            return new ResponseEntity<String>(HttpStatus.BAD_REQUEST);
         }
     }
+
+    @PostMapping("/update/userPassword")
+    @ResponseBody
+    public ResponseEntity<String> updatePassword(@RequestBody UserDto userDto) {
+        try {
+            System.out.println(userDto);
+            userService.updatePassword(userDto);
+            return new ResponseEntity<>("ok", HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+
+    }
+
 }

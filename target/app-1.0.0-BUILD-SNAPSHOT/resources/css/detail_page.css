@@ -59,6 +59,7 @@
 .movie_ott_box {
     padding: 20px 0;
     overflow: hidden;
+    min-height: 50px;
 }
 .ott_img {
     width: 50px;
@@ -124,8 +125,13 @@
     margin: -5px 5px 0 20px;
 }
 .best_review_txt {
+    margin: 10px 0;
     height: 120px;
-    padding: 10px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
 }
 .nofilter {
     filter: none !important;
@@ -151,7 +157,7 @@
 }
 #jjim, #check, #like { display: none;}
 /*
-#jjim:checked ~ .jjim_box .click_icon { /* �꾨Ⅴ硫� 鍮④컙�됱쑝濡� �됱긽 蹂�寃�
+#jjim:checked ~ .jjim_box .click_icon { /* 占쎌쥙�∽옙��숋옙�곗떵占쎌쥜�� �좎룞�숋쭗�ㅿ옙��땬占쎌닂�숁틦�욍걬占싸뀀뙔占쏙옙 占쎌쥙�ο쭕�듬Ь�좑옙 占쎄퀗�э옙�낅눇�용낌��
     filter: invert(16%) sepia(89%) saturate(6054%) hue-rotate(358deg) brightness(97%) contrast(113%);
     animation: scaleup 1s;
 }
@@ -198,15 +204,30 @@
     gap: 25px;
     overflow-x: auto;
 }
+.actor_box::-webkit-scrollbar {
+    height: 10px;
+}
+.actor_box::-webkit-scrollbar-thumb {
+    background-color: #979797a3;
+    border-radius: 10px;
+}
+.actor_box::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0);
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
+}
 .actor_box1 {
     width: 100px;
 }
 .photo {
     width: 100px;
-    height: 100px;
-    border-radius: 50%;
+    border-radius: 5px;
     background-color: #fff;
     overflow: hidden;
+    display: flex;
+}
+#wrap.photo img {
+    height: auto !important;
 }
 .photo_name {
     text-align: center;
@@ -273,7 +294,6 @@
     background: #8454eb;
     transition: all 0.3s;
 }
-
 
 .review_list_box {
     color: lightgray;
@@ -424,6 +444,7 @@
     box-sizing: border-box;
     border-radius: 10px;
     padding: 10px 0;
+    resize: none;
 }
 
 .review_content_update {
@@ -444,6 +465,9 @@
     .content1 {
         width: 100%;
         padding: 50px 30px 0;
+    }
+    .movie_ott_box {
+        min-height: auto;
     }
     .best_review_box {
         width: 100%;
@@ -474,6 +498,7 @@
 
     }
     .movie_title {
+        width: 100%;
         float: none;
         font-size: 2.5em;
     }
@@ -575,6 +600,9 @@
         float: left;
         font-size: 1em;
     }
+    .best_review_txt {
+        height: 80px;
+    }
     .best_icon {
         width: 20px;
         height: 20px;
@@ -594,9 +622,6 @@
         width: 15px;
         height: 15px;
     }
-    .best_review_txt {
-        height: 90px;
-    }
     .like_icon {
         width: 15px;
         height: 15px;
@@ -613,13 +638,16 @@
     }
     .txt {
         font-size: 10px;
+        line-height: 22px;
+    }
+    .actor_box {
+        gap: 15px;
     }
     .actor_box1 {
         width: 70px;
     }
     .photo {
         width: 50px;
-        height: 50px;
         margin: 0 auto;
     }
     .photo_name {

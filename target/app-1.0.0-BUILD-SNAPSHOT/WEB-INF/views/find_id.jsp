@@ -16,7 +16,7 @@
     <div id="wrap">
         <div class="login_bg"></div>
         <main class="container">
-            <div class="main_logo"><a href="<c:url value='/'/>"><img src="<c:url value='/img/logo.png'/>" alt="로고 이미지"></a></div>
+            <div class="logo"><a href="<c:url value='/'/>"><img src="<c:url value='/img/logo.png'/>" alt="movielike"></a></div>
             <form action="" class="search_form">
                 <div class="title">아이디 찾기</div>
                 <table>
@@ -51,9 +51,7 @@
                     </tr>
                 </table>
             </form>
-            
         </main>
-
     </div>
     <script>
         $(document).on('click', '#find_id', function () {

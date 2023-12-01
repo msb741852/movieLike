@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    var c_path = (location.pathname).split("/")[1];
     var nowPage = 0;
     var pageSize = 20;
 // 위 키워드 선택 시 해당 키워드에 색 칠하기
@@ -72,7 +73,7 @@ $(document).ready(function(){
         let keyword = {genreList: genr, countryNameList: country, ottList: ott, movScore: score, movScoreCnt: review, nowPage: nowPage, pageSize: pageSize, sort: sort};
         $.ajax({
             type:'POST',       // 요청 메서드
-            url: '/app/findKeyword',  // 요청 URI
+            url: '/' + c_path + '/findKeyword',  // 요청 URI
             headers : { "content-type": "application/json"}, // 요청 헤더
             dataType : 'text', // 전송받을 데이터의 타입
             data : JSON.stringify(keyword),  // 서버로 전송할 데이터. stringify()로 직렬화 필요.
@@ -109,9 +110,6 @@ $(document).ready(function(){
         }); // $.ajax()
     }
 
-    var c_path = (location.pathname).split("/")[1];
-    //console.log("c_path : " + c_path);
-
     function mvBox_null(nodata){
         let txt = `<div class="nodata_txt">${nodata}</div>`
         $(".m_mvListBox").html(txt);
@@ -131,9 +129,7 @@ $(document).ready(function(){
             let date = dt.getDate() < 10 ? "0" + dt.getDate() : dt.getDate();
             let ottList = "";
             movie.ottList.forEach(function (ott, i){
-                ottList += `<div class="m_mvOttBox">
-                                <span class="m_mvOtt"><img src= "../img/ott/${ott.ottId}.png" alt="${ott.ottName}">${ott.ottName}</span>
-                            </div>`;
+                ottList += `<span class="m_mvOtt"><img src= "../img/ott/${ott.ottId}.png" alt="${ott.ottName}">${ott.ottName}</span>`;
             });
 
             let dirName = "감독 : ";
@@ -165,11 +161,13 @@ $(document).ready(function(){
                                     </div>
                                     <div class="m_mvDescBox">
                                         <span class="m_mvGen">${genrName}</span><span class="m_mvTime">${movie.movTime}분</span>
-                                    </div>`
-                                    + ottList +
-                                    `<div class="avg_box">
+                                    </div>
+                                    <div class="m_mvOttBox">`
+                                        + ottList +
+                                    `</div>
+                                    <div class="avg_box">
                                         <div class="star_icon"><img src= "../img/star.png" alt="★"></div>
-                                        <div class="movie_avg">${movie.movScore}</div>
+                                        <div class="movie_avg">${(movie.movScore).toFixed(1)}</div>
                                         <div class="movie_avg_cnt">( ${(movie.movScoreCnt).toLocaleString("ko")} )</div>
                                     </div>
                                 </div>
@@ -203,5 +201,12 @@ $(document).ready(function(){
     $(".m_mvListBox").on('click', '.m_mvList', function(){
         let movId = $(this).data("movid");
         location.href = "../movie/detail?movId="+movId;
+    });
+
+    // 선택한 태그 체크해제
+    $(".chk_delete_btn").click(function(){
+        $(":checkbox").prop("checked",false);
+        $(".m_tdItem").removeClass('m_tdItem_check');
+        mvBox_null("키워드를 골라 원하는 영화를 찾아보세요");
     });
 });

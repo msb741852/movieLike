@@ -11,5 +11,8 @@
         <typeAlias alias="myListDto" type="com.movielike.app.domain.MyListDto" />
         <typeAlias alias="watchedMovieDto" type="com.movielike.app.domain.WatchedMovieDto" />
         <typeAlias alias="userDto" type="com.movielike.app.domain.UserDto" />
+        <typeAlias alias="reviewScoreDto" type="com.movielike.app.domain.ReviewScoreDto"/>
+        <typeAlias alias="genreDto" type="com.movielike.app.domain.GenreDto" />
+        <typeAlias alias="userGenreDto" type="com.movielike.app.domain.UserGenreDto" />
     </typeAliases>
 </configuration>

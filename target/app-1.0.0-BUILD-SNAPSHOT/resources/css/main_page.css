@@ -1,25 +1,27 @@
 #wrap img {
     width: 100%; height: 100%;
 }
-.header {
-    position: fixed;
-    left: 0;
-    top: 0;
-    z-index: 9999;
-}
+
 .container {
     width: 100%;
     overflow: hidden;
     background-color: #222;
     padding-bottom: 200px;
 }
-/* 메인베너 */
 .main_banner {
     position: relative;
     width: 100%;
     height: 44vw;
-    margin-top: 100px;
-    overflow: hidden;           
+    overflow: hidden;
+}
+.mainbanner_list a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
 }
 .mainbanner_list {
     position: absolute;
@@ -33,17 +35,18 @@
 .main_banner > .on{
     opacity: 1;
 }
-#control { 
+#control {
     position: absolute;
     width: 100%;
     bottom: 30px;
-    text-align: center;         
+    text-align: center;
+    z-index: 99999;
 }
 #control a {
     display: inline-block;
     width: 15px;
     height: 15px;
-    background: #f6f5f5;                       
+    background: #f6f5f5;
     line-height: 26px;
     font-size: 0.8em;
     border-radius: 14px;
@@ -60,7 +63,7 @@
     height: 8px;
     background-color: #A785EF;
     border-radius: 10px;
-    transform: translateY(63px) rotate(50deg);  
+    transform: translateY(63px) rotate(50deg);
 }
 .left_btn>span:last-child{
     position: absolute;
@@ -68,7 +71,7 @@
     height: 8px;
     background-color: #A785EF;
     border-radius: 10px;
-    transform: translateY(30px) rotate(-50deg);  
+    transform: translateY(30px) rotate(-50deg);
 }
 .left_btn:hover span{
     background-color: #fff;
@@ -76,6 +79,7 @@
 }
 .left_btn{
     position: absolute;
+    z-index: 9999;
     width: 50px;
     height: 100px;
     top: 50%;
@@ -87,6 +91,7 @@
 }
 .right_btn{
     position: absolute;
+    z-index: 9999;
     width: 50px;
     height: 100px;
     top: 50%;
@@ -103,7 +108,7 @@
     height: 8px;
     background-color: #A785EF;
     border-radius: 10px;
-    transform: translateY(63px) rotate(-50deg);  
+    transform: translateY(63px) rotate(-50deg);
 }
 .right_btn>span:last-child{
     position: absolute;
@@ -111,13 +116,12 @@
     height: 8px;
     background-color: #A785EF;
     border-radius: 10px;
-    transform: translateY(30px) rotate(50deg);  
+    transform: translateY(30px) rotate(50deg);
 }
 .right_btn:hover span{
     background-color: #fff;
     transition: 0.2s ease;
 }
-
 
 .search_bar {
     width: 950px;
@@ -142,6 +146,7 @@
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
+    cursor: pointer;
 }
 .s_icon img {
     color: gray;
@@ -228,6 +233,7 @@
     font-size: 120px;
     font-style: italic;
     font-weight: 900;
+    cursor: default;
 }
 .search_cnt_max .ranking_none {
     display: none;
@@ -236,7 +242,7 @@
 .swiper-pagination {
     display: none;
 }
- 
+
 :root {
     --swiper-theme-color: #fff !important;
     border-color: #fff;
@@ -300,13 +306,13 @@
 }
 .review_txt {
     margin: 10px 0 20px;
-    height: auto;
+    height: 100px;
     line-height: 25px;
     text-overflow: ellipsis;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 7;
+    -webkit-line-clamp: 4;
 }
 .review_right_box {
     float: left;
@@ -332,6 +338,9 @@
 }
 
 @media screen and (min-width: 280px) and (max-width: 480px) {
+    .container {
+        padding-bottom: 100px;
+    }
     .main_banner {
         margin: 0;
     }
@@ -392,9 +401,6 @@
         height: 50px;
         margin-top: -6px;
     }
-    /* .recommended_item_content {
-        height: 100%;
-    } */
     .swiper {
         width: 75%;
     }
@@ -419,10 +425,37 @@
     .poster_box {
         flex-wrap: wrap;
     }
+    .review_movie_name {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 0.9em;
+        padding: 0;
+    }
+    .review_txt {
+        margin: 5px 0 10px;
+        font-size: 0.6em;
+    }
+    .review_title, .movie_star {
+        font-size: 0.5em;
+    }
+    .star_icon {
+        width: 15px;
+        height: 15px;
+        margin: 0 5px 0 10px;
+    }
+    .like_icon, .like_bin {
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
+    }
     .more_btn {
         padding-top: 15px;
     }
     .poster {
         width: calc((100% - 20px) / 2);
+    }
+    :root {
+        --swiper-navigation-size: 22px !important;
     }
 }

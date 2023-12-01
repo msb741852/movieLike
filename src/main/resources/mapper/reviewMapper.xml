@@ -6,7 +6,7 @@
 <mapper namespace="com.movielike.app.dao.reviewMapper">
     <!-- 해당 영화 리뷰 범위 불러오기 -->
     <select id="selectMovieReviewList" parameterType="map" resultType="reviewDto">
-        select r.*, u.userNickName from review r
+        select r.*, u.userNickname from review r
         join user u
         on r.userId = u.userId
         where true
@@ -29,7 +29,7 @@
     </select>
     <!-- 베스트 3 리뷰 가져오기 -->
     <select id="selectBestReview" parameterType="int" resultType="reviewDto">
-        select r.rvId, r.movId, r.rvScore, r.rvContent, r.rvLike, u.userNickName
+        select r.rvId, r.movId, r.rvScore, r.rvContent, r.rvLike, u.userNickname
         <choose>
             <when test="movId > 0">
                 from review r
@@ -82,4 +82,66 @@
     <delete id="deleteReview" parameterType="int">
         delete from review where rvId = #{rvId}
     </delete>
+
+    <select id="confirmReview" parameterType="map" resultType="int">
+        select count(rvId) from review where userId = #{userId} and movId = #{movId}
+    </select>
+
+    <select id="selectReviewScore" parameterType="int" resultType="map">
+        select rvScore, movId from review where rvId = #{rvId}
+    </select>
+
+    <!-- 키워드 찾기 무비 리스트 출력 -->
+    <select id="selectReview" resultType="reviewDto" parameterType="map">
+        select
+        r.rvId,
+        r.userId,
+        r.movId,
+        r.rvScore,
+        r.rvContent,
+        r.rvRegDate,
+        r.rvLike,
+        u.userNickname,
+        m.movName
+        from review r
+        join user u
+        on r.userId = u.userId
+        left join movie m on r.movId =m.movId
+        WHERE r.userId = #{userId}
+        <if test="orderType == 'new'">
+            ORDER BY rvRegDate DESC
+        </if>
+        <if test="orderType == 'like'">
+            ORDER BY rvLike DESC
+        </if>
+        <if test="startRow != null and pageSize != null">
+            LIMIT #{startRow}, #{pageSize}
+        </if>
+    </select>
+
+    <select id="selectReviewCount" resultType="Integer" parameterType="map">
+        select
+        count(*)
+        from review r
+        WHERE r.userId = #{userId}
+    </select>
+
+    <select id="selectReviewGroupByScore" resultType="reviewScoreDto" parameterType="reviewDto">
+        SELECT rvScore, COUNT(*) as scoreCount
+        FROM review
+        WHERE userId = #{userId}
+        GROUP BY rvScore
+        ORDER BY rvScore
+    </select>
+
+    <delete id="deleteAllReview" parameterType="int">
+        delete from review where userId = #{userId}
+    </delete>
+    <delete id="deleteAllReviewLike" parameterType="int">
+        delete from review where userId = #{userId}
+    </delete>
+    <select id="selectUserReview" parameterType="int" resultType="map">
+        select movId, rvScore from review where userId = #{userId}
+    </select>
+
 </mapper>
