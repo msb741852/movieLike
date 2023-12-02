@@ -1,4 +1,6 @@
-
+#wrap {
+    padding-top: 0;
+}
 #wrap img {
     width: 100%; height: 100%;
 }

@@ -4,7 +4,6 @@ var c_path = (location.pathname).split("/")[1];
 // 정규 표현식
 const expPwText = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
 const expNameText = /^[가-힣]+$/;
-const expHpText = /^\d{3}-\d{3,4}-\d{4}$/;
 const expEmailText = /^[A-Za-z-0-9\-\.]+@[A-Ja-z-0-9\-\.]+\.[A-Ja-z-0-9]+$/;
 const expNicknameText= /^(?=.*[a-z0-9가-힣])[a-z0-9가-힣]{2,16}$/;
 
@@ -21,7 +20,6 @@ function sendit() {
     const birth_year = document.getElementById('birth_year');
     const birth_month = document.getElementById('birth_month');
     const birth_date = document.getElementById('birth_date');
-    const jangenre_chk = document.getElementsByName('genre_chk');
 
     if(email === "" ) {
         Swal.fire('알림', '이메일을 입력해주세요.', 'warning').then(() => {
@@ -90,7 +88,6 @@ function sendit() {
         nickname.focus();
         return false;
     }
-
     if (!expNicknameText.test(nickname.value)) {
         Swal.fire('알림', '닉네임이 올바르지 않습니다.\n(한글 초성 및 모음 제외한 2자 이상 16자 이하, 영어 또는 숫자 또는 한글로 구성으로만 가능합니다)', 'warning');
         nickname.focus();

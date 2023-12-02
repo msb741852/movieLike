@@ -108,11 +108,9 @@ public class MyPageController {
     @PostMapping("/myPage/modifyUser")
     @ResponseBody
     public ResponseEntity<String> modifyUser(@RequestBody Map<String, Object> user, HttpSession httpSession) {
-        Integer loginId = (int)httpSession.getAttribute("liogdin");
         String success = "";
         try {
             success = userService.updateUser(user);
-            System.out.println("success : " + success);
             if (success.equals("")) {
                 return new ResponseEntity<String>(success, HttpStatus.OK);
             }else {

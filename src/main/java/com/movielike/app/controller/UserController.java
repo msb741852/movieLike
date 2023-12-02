@@ -58,7 +58,7 @@ public class UserController {
             if(userService.selectUserInfo(userDto) == 1) {
                 return new ResponseEntity<String>("ok!",HttpStatus.OK);
             } else {
-                return new ResponseEntity<String>(HttpStatus.BAD_REQUEST);
+                return new ResponseEntity<String>(HttpStatus.OK);
             }
         } catch (Exception e) {
             return new ResponseEntity<String>(HttpStatus.BAD_REQUEST);

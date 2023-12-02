@@ -104,12 +104,6 @@ $(document).keydown(function(event) {
         location.replace(location.pathname);
     }
 });
-// $(document).mouseup(function (e){
-//   var Popup = $(".popup");
-//   if(Popup.has(e.target).length === 0){
-//     closePopup();
-//   }
-// });
 
 function checkIdModify(){
     let email = $('#email').val();
@@ -130,7 +124,7 @@ function checkphModify(){
     }
 }
 function checkNickModify(){
-    if (!expNameText.test($('#nickname').val())) {
+    if (!expNicknameText.test($('#nickname').val())) {
         Swal.fire('알림', '닉네임이 올바르지 않습니다.\n(한글 초성 및 모음 제외한 2자 이상 16자 이하, 영어 또는 숫자 또는 한글로 구성으로만 가능합니다)', 'warning').then(() => {
             $('#nickname').focus();
         });
@@ -167,7 +161,6 @@ function updatePopup() {
                 userGenre.push({genrId: $(".genre_checkbox").eq(i).data("genr"), userId: sessionId});
             }
         }
-        console.log(userGenre);
         $.ajax({
             type: 'POST',
             url: '/' + c_path + '/myPage/modifyUser',
@@ -189,8 +182,6 @@ function updatePopup() {
             error: function (e) {
                 if (e.responseText != ""){
                     let error = (e.responseText).split(",");
-                    console.log(error);
-                    console.log(error.length);
                     for(let i = 0; i < error.length-1; i++){
                         console.log(error[i]);
                         if (error[i] == "id"){
