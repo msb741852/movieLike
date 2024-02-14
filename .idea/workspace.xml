@@ -9,18 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bdeb4651-8610-4231-90a2-df2c150485cb" name="Changes" comment="[UPLOAD] movieLike v1.0">
+    <list default="true" id="bdeb4651-8610-4231-90a2-df2c150485cb" name="Changes" comment="[FIX] movieLike v1.0.1">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/controller/MyPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/controller/MyPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/movielike/app/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/movielike/app/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/find_password.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/find_password.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/find_id.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/find_id.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/join_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/join_page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/login_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/login_page.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/join.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/join.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/main_item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/main_item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/mypage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/mypage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +67,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -92,6 +85,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources/mapper" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/movieott_sql(insert)" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/img" />
       <recent name="$PROJECT_DIR$/src/main/java/com/movielike/app/dao" />
       <recent name="$PROJECT_DIR$/src/main/webapp/resources/font" />
@@ -121,7 +115,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="f29622b1-0d0f-4b6e-bd4a-86ba46e46a6a" />
+        <option name="BASE_DIRECTORY_NAME" value="de41ac3c-7f2a-465f-9878-45f50e5ebd34" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -304,7 +298,28 @@
       <workItem from="1701398689551" duration="969000" />
       <workItem from="1701399663822" duration="1066000" />
       <workItem from="1701418714384" duration="5000" />
-      <workItem from="1701507724267" duration="10875000" />
+      <workItem from="1701507724267" duration="14243000" />
+      <workItem from="1701658914067" duration="3000" />
+      <workItem from="1701752414683" duration="42000" />
+      <workItem from="1701990581370" duration="112000" />
+      <workItem from="1702253199140" duration="891000" />
+      <workItem from="1702256288312" duration="179000" />
+      <workItem from="1702257990220" duration="200000" />
+      <workItem from="1702258417844" duration="602000" />
+      <workItem from="1702262081172" duration="1049000" />
+      <workItem from="1702264247359" duration="155000" />
+      <workItem from="1702264603697" duration="1787000" />
+      <workItem from="1702282574735" duration="1089000" />
+      <workItem from="1702286751172" duration="55000" />
+      <workItem from="1702287044776" duration="705000" />
+      <workItem from="1702344293057" duration="12000" />
+      <workItem from="1702344481490" duration="12000" />
+      <workItem from="1702367569765" duration="1832000" />
+      <workItem from="1703139276015" duration="819000" />
+      <workItem from="1703140667516" duration="103000" />
+      <workItem from="1705557174699" duration="1700000" />
+      <workItem from="1705630461815" duration="7075000" />
+      <workItem from="1707823778921" duration="4434000" />
     </task>
     <task id="LOCAL-00001" summary="[UPLOAD] movieLike v1.0">
       <option name="closed" value="true" />
@@ -322,7 +337,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701399534835</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[FIX] movieLike v1.0.1">
+      <option name="closed" value="true" />
+      <created>1701531753188</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701531753188</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,19 +382,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -380,6 +391,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="합본&#10;&#10;수빈님것과 합침" />
     <MESSAGE value="[UPLOAD] movieLike v1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="[UPLOAD] movieLike v1.0" />
+    <MESSAGE value="[FIX] movieLike v1.0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="[FIX] movieLike v1.0.1" />
   </component>
 </project>
